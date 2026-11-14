@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "my-project1/api/apple2k26/**/*.php": {
+      "runtime": "vercel-php@0.7.1"
+    }
+  },
+  "routes": [
+    {
+      "src": "^/$",
+      "dest": "/my-project1/api/apple2k26/index.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/my-project1/api/apple2k26/$1"
+    }
+  ]
+}
