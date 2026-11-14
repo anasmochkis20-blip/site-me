@@ -1,13 +1,17 @@
 {
   "functions": {
-    "api/apple2k26/*.php": {
+    "my-project1/api/apple2k26/**/*.php": {
       "runtime": "vercel-php@0.7.1"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/api/apple2k26/$1"
+      "source": "/",
+      "destination": "/my-project1/api/apple2k26/index.php"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/my-project1/api/apple2k26/$1"
     }
   ]
 }
